@@ -1,0 +1,93 @@
+.button {
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include def-anim;
+    font-size: 19px;
+    line-height: 20px;
+    padding: 15px 40px;
+    position: relative;
+    background-color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        .text {
+            color: #fff;
+        }
+    }
+
+    .mask.show {
+        animation: show .3s ease forwards;
+    }
+
+    .mask.hide {
+        animation: hide .3s ease;
+    }
+
+    .mask {
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        background-color: #000;
+        transform: translateY(100%);
+        @include def-anim;
+    }
+
+    .text {
+        @include def-anim;
+        color: #000;
+        position: relative;
+        font-weight: 600;
+        z-index: 2;
+    }
+
+
+    &:disabled {
+        opacity: .5;
+        pointer-events: none;
+        touch-action: none;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.button.dark {
+    background-color: #000;
+
+    .mask {
+        background-color: #fff;
+    }
+
+    .text {
+        color: var(--yellow);
+    }
+
+    &:hover {
+        .text {
+            color: #000;
+        }
+    }
+}   
+
+@keyframes show {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes hide {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

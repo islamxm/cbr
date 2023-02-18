@@ -1,0 +1,19 @@
+.duty {
+    padding-bottom: 150px;
+    position: relative;
+    &__in {
+        padding: 40px 0;
+    }
+
+    &__head {
+        margin-bottom: 30px;
+    }
+
+    &__body {
+        margin-bottom: 30px;
+
+        li {
+            list-style: disc;
+        }
+    }
+}

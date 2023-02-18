@@ -1,0 +1,95 @@
+.hero {
+    padding: 40px 0;
+
+    &__in {
+        background-color: var(--yellow);
+        height: 507px;
+       
+        border-radius: 15px;
+        padding: 40px 55px;
+    }
+
+    &__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &_head {
+            font-weight: 300;
+            font-size: 28.9168px;
+            line-height: 35px;
+            text-transform: uppercase;
+            span {
+                font-weight: 700;
+                font-size: 37.6452px;
+                line-height: 46px;
+                display: block;
+            }   
+        }
+
+        &_main {
+            display: flex;
+
+            &_form {
+                display: flex;
+                flex-direction: column;
+                max-width: 260px;
+                width: 100%;
+
+                .input {
+                    margin: 5px 0;
+                    padding: 12px 25px;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    font-weight: 300;
+                    font-size: 19px;
+                    line-height: 23px;
+                }
+
+                .button {
+                    margin-top: 5px;
+                }
+            }
+
+            &_list {
+                margin-left: 30px;
+                max-width: 410px;
+                width: 100%;
+                background-color: #fff;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                padding: 10px 35px;
+
+                ul {
+                    li {
+                        font-weight: 500;
+                        font-size: 17px;
+                        line-height: 21px;
+                        margin-bottom: 5px;
+                        position: relative;
+                        padding-left: 20px;
+
+                        &:after {
+                            position: absolute;
+                            top: calc(50% - 2.5px);
+                            left: 0;
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 100%;
+                            background-color: #000;
+                            content: '';
+
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
