@@ -9,6 +9,10 @@
             justify-content: space-between;
         }
 
+        &_mob {
+            display: none;
+        }
+
         &_logo {
             height: 74px;
             flex: 0 0 auto;
@@ -137,6 +141,12 @@
                     font-weight: 500;
                 }
             }
+
+            &_item.header__main_nav_item-drop {
+                position: relative;
+
+                
+            }
         }
 
         &_menu {
@@ -156,6 +166,157 @@
                     line-height: 17px;
                     font-weight: 500;
                 }
+            }
+
+            &_item.header__main_menu_item-drop {
+                position: relative;
+                padding-right: 15px;
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    background-image: url('../img/icons/triangle.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    @include def-anim;
+                    top: calc(50% - 5px);
+                    right: 0;
+                }
+
+                .header__main_menu_item_submenu {
+                    opacity: 0;
+                    z-index: -1;
+                    @include def-anim;
+                    background-color: #fff;
+                    position: absolute;
+                    width: 350px;
+                    border-radius: 10px;
+                    padding: 10px;
+                    
+                }
+
+                &:hover {
+
+                    &:after {
+                        transform: rotate(180deg);
+                    }
+                    .header__main_menu_item_submenu {
+                        opacity: 1;
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .header.active {
+        
+        &:after {
+            width: 100%;
+        }
+    }
+
+    .header {
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        
+        
+        &:after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: var(--yellow);
+            width: 0;
+            content: '';
+            @include def-anim;
+        }
+
+
+        &__top {
+            position: relative;
+            z-index: 2;
+            &_main {
+                display: none;
+            }
+            &_mob {
+                display: block;
+
+                &_btn.active {
+
+                    span {
+
+                        &:nth-child(1) {
+                            top: calc(50% - 2px);
+                            transform: rotate(45deg);
+                        }
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+                        &:nth-child(3) {
+                            bottom: calc(50% - 2px);
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+
+                &_btn {     
+                    height: 35px;
+                    width: 60px;
+                    position: relative;
+                    background-color: unset;
+                    cursor: pointer;
+
+                    span {
+                        height: 4px;
+                        width: 100%;
+                        display: block;
+                        border-radius: 40px;
+                        background-color: #000;
+                        @include def-anim;
+                        position: absolute;
+
+                        &:nth-child(1) {
+                            top: 0;
+                            left: 0;
+                        }
+                        &:nth-child(2) {
+                            top: calc(50% - 2px);
+                            left: 0;
+                        }
+                        &:nth-child(3) {
+                            bottom: 0;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__main {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+
+        &__top {
+
+            &_logo {
+                height: 50px;
+                
             }
         }
     }

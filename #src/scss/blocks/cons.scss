@@ -87,3 +87,38 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .cons {
+
+        &__in {
+            padding: 30px;
+            align-items: center;
+            min-height: unset;
+        }
+
+        &__main {
+            padding: 0;
+            width: 100%;
+
+            
+            
+        }
+
+        &__img {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .cons {
+
+        &__main {
+            
+            &_action {
+                max-width: unset;
+            }
+        }
+    }
+}

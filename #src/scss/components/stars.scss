@@ -1,0 +1,15 @@
+.stars {
+    display: flex;
+    align-items: center;
+
+    .star {
+        width: 13px;
+        height: 13px;
+        background-image: url('../img/icons/star.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin: 0 2px;
+        flex: 0 0 auto;
+    }
+}

@@ -68,3 +68,18 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .faq {
+
+        &__body {
+
+            &_item {
+                &_head {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

@@ -153,3 +153,78 @@
         color: #8B8B8B;
     }
 }
+
+@media (max-width: 1024px) {
+
+    .footer {
+
+        &__top {
+            padding-bottom: 20px;
+
+            &_logo {
+                height: 50px;
+            }
+
+            &_main {
+                font-size: 14px;
+                line-height: 17px;
+                span {
+                    font-size: 14px;
+                line-height: 17px;
+                }
+            }
+        }
+
+        &__main {
+            flex-wrap: wrap;
+
+
+            &_nav {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+
+            &_cn {
+                width: 100%;
+                text-align: left;
+
+                &_soc {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+
+        &__top {
+            flex-wrap: wrap;
+
+            &_logo {
+                margin-bottom: 20px;
+            }
+            
+            &_main {
+                width: 100%;
+                max-width: unset;
+            }
+
+        }
+        &__main {
+            
+            
+            &_nav {
+                flex-wrap: wrap;
+
+
+                &_part {
+                    width: 100%;
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

@@ -6,7 +6,13 @@
         height: 507px;
        
         border-radius: 15px;
-        padding: 40px 55px;
+        padding: 0 10px 0 55px;
+        background-image: url('../img/hero-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
     }
 
     &__content {
@@ -14,6 +20,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding: 40px 0;
         &_head {
             font-weight: 300;
             font-size: 28.9168px;
@@ -91,5 +98,89 @@
         }
     }
 
+    &__img {
 
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: flex;
+        }
+    }
+
+}
+
+
+@media (max-width: 1024px) {
+    .hero {
+
+        &__in {
+            padding: 0 40px;
+
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__content {
+            width: 100%;
+            &_main {
+
+                &_form {
+                    width: 50%;
+                    max-width: unset;
+                }
+
+                &_list {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+
+        &__in {
+            flex-wrap: wrap;
+            padding: 25px;
+            height: unset;
+            background-image: unset;
+        }
+
+        &__content {
+            padding: 0;
+
+            &_head {
+                font-size: 25px;
+                line-height: 30px;
+                margin-bottom: 40px;
+
+                span {
+                    font-size: 25px;
+                    line-height: 30px;
+                }
+            }
+
+            &_main {
+                flex-wrap: wrap;
+
+                &_form {
+                    width: 100%;
+                    margin-bottom: 25px;
+
+                }
+
+                &_list {
+                    width: 100%;
+                    padding: 20px;
+                    max-width: unset;
+                    margin: 0;
+
+                }
+            }
+        }
+    }
 }

@@ -84,3 +84,31 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+
+    .yes {
+
+        &__in {
+            padding: 25px;
+            flex-wrap: wrap;
+        }
+
+        &__main {
+            margin-bottom: 30px;
+            &_head {
+                text-align: center;
+            }
+            &_body {
+                text-align: center;
+            }
+        }
+
+        &__action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+}

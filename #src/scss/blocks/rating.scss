@@ -67,3 +67,33 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .rating {
+
+        &__in {
+
+        }
+
+        &__body {
+            justify-content: center;
+
+            &_item {
+                width: calc((100% / 3) - 10px);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .rating {
+
+        &__body {
+
+            &_item {
+                width: calc(100% - 10px);
+            }
+        }
+    }
+}

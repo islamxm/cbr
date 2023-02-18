@@ -1,5 +1,4 @@
 .duty {
-    padding-bottom: 150px;
     position: relative;
     &__in {
         padding: 40px 0;
@@ -13,7 +12,19 @@
         margin-bottom: 30px;
 
         li {
-            list-style: disc;
+            position: relative;
+            padding-left: 10px;
+
+            &:after {
+                position: absolute;
+                top: 5px;
+                left: 0;
+                width: 5px;
+                height: 5px;
+                border-radius: 100%;
+                background-color: #000;
+                content: '';
+            }
         }
     }
 }

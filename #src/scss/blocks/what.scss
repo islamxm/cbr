@@ -38,3 +38,22 @@
 
 
 }
+
+@media (max-width: 768px) {
+    .what {
+
+        &__in {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &__item {
+            width: 100%;
+            margin: 0;
+            border: none;
+            margin-bottom: 50px;
+            padding: 0;
+            
+        }
+    }
+}

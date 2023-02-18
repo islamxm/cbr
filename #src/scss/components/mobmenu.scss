@@ -1,0 +1,135 @@
+.mobmenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    background-color: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    padding-top: 150px;
+    z-index: 99;
+    @include def-anim;
+
+    &__nav {
+
+        &_list {
+
+        }
+
+        &_item.active {
+
+            &:after {
+                width: 100%;
+            }
+
+            a {
+                color: #fff;
+            }
+        }
+
+        &_item {
+
+            position: relative;
+            padding: 20px;
+
+            &:after {
+                position: absolute;
+                height: 100%;
+                width: 0;
+                top: 0;
+                left: 0;
+                content: '';
+                background-color: #000;
+                @include def-anim;
+            }
+
+            a {
+                font-weight: 300;
+                font-size: 30px;
+                line-height: 40px;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                position: relative;
+                z-index: 10;
+                @include def-anim;
+            }
+        }
+    }
+
+    &__contacts {
+        flex: 1 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding: 0 20px;
+        
+
+        &_soc {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            &_item {
+                flex: 0 0 auto; 
+                margin: 0 4px;
+
+
+                a {
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        &_ex {
+            &_tel {
+                font-size: 20px;
+                line-height: 25px;
+                font-weight: 700;
+                margin-bottom: 10px;
+    
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &_text {
+                // color: var(--dark-gray);
+            }
+        }
+    }
+}
+
+.mobmenu.active {
+    transform: translateX(0);
+
+}
+
+
+@media (max-width: 768px) {
+    .mobmenu {
+
+        &__nav {
+
+            &_item {
+                a {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}

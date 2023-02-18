@@ -62,3 +62,33 @@
 
     }
 }
+
+@media (max-width: 1024px) {
+    .vid {
+
+        &__in {
+            flex-wrap: wrap;
+        }
+
+        &__main {
+            margin-bottom: 30px;
+            padding-right: 0;
+
+            &_list {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            &_item {
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        &__el {
+            width: 100%;
+            
+        }
+    }
+}

@@ -19,6 +19,26 @@
         color: #fff;
         display: flex;
         flex-direction: column;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+
+            &:after {
+                backdrop-filter: blur(5px);
+            }
+        }
+
+        &:after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background-color: rgba(#000, .4);
+            top: 0;
+            left: 0;
+            @include def-anim;
+        }
 
         &:nth-child(1) {
             background-image: url('../img/arts-1.png');
@@ -36,6 +56,8 @@
             margin-bottom: 15px;
             font-size: 13.9378px;
             line-height: 17px;
+            position: relative;
+            z-index: 3;
         }
 
         &_name {
@@ -43,12 +65,62 @@
             font-size: 20px;
             line-height: 24px;
             margin-bottom: 20px;
+            position: relative;
+            z-index: 3;
         }
 
         &_action {
             flex: 1 0 auto;
             display: flex;
             align-items: flex-end;
+            position: relative;
+            z-index: 3;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .arts {
+
+
+        &__in {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__item {
+            width: calc((100% / 2) - 20px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .arts {
+
+
+        &__in {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        &__item {
+            width: calc(100%);
+            margin-left: 0;
+            margin-right: 0;
+            padding: 20px;
+
+            &:hover {
+                
+                &:after {
+                    backdrop-filter: blur(0px);
+                }
+            }
+            &:after {
+                
+            }
+
+            .button {
+                width: 100%;
+            }
         }
     }
 }
